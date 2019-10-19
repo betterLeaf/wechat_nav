@@ -1,0 +1,14 @@
+<cover-view class='nav-wrap {{position == "fix" ? "fix" :"" }}'  style='height: {{navHeight}}px'>
+  <cover-view  style='height: {{navHeight -1}}px; width: 100%'>
+    <cover-view class='menu' 
+      wx:if="{{backShow}}"
+      style='width: {{menuWith}}px; height: {{menuHeight}}px; top:{{menuTop}}px; left: {{menuLeft}}px'>
+        <cover-view class='icon' catch:tap="back"><cover-image src="/common/image/navbar_back_white.png" style="width: 20px; height: 20px"></cover-image></cover-view>
+        <cover-view class='line'><cover-image src="/common/image/line.png" style="width: 1px; height: 20px"></cover-image></cover-view>
+        <cover-view class='icon' catch:tap="home"><cover-image src="/common/image/navbar_home_white.png" style="width: 20px; height: 20px"></cover-image></cover-view>
+    </cover-view>
+    <cover-view class='title' style='top: {{menuTop}}px; height:{{menuHeight}}px; line-height:{{menuHeight}}px'>{{title}}</cover-view>
+  </cover-view>
+</cover-view>
+<cover-view class="loading" style='height: {{navHeight}}px'></cover-view>
+<!-- <cover-view class="loading" style='height: 1px'></cover-view> -->
